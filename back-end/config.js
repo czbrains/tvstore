@@ -1,5 +1,5 @@
 module.exports = {
-    database : 'cz_tvstore',
+    database : '',
     host: '',
     user: '',
     password: '',
