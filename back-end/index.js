@@ -1,10 +1,16 @@
 const express = require('express');
 const app = express();
+const cors = require('cors')
 const routes = require('./routes');
 
-app.use(routes);
-app.use(express.static('public'))
+const corsOptions = {
+    origin: 'http://localhost:8080',
+}
 
-app.listen(3000, function () {
-  console.log('Listening on port 3000!');
-});
+app
+    .use(cors(corsOptions))
+    .use(routes)
+    .use(express.static('public'))
+    .listen(3000, function () {
+        console.log('Listening on port 3000!');
+    });
