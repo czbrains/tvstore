@@ -4,7 +4,7 @@ const cors = require('cors')
 const routes = require('./routes');
 
 const corsOptions = {
-    origin: 'http://localhost:8080',
+    origin: '*',
 }
 
 app
